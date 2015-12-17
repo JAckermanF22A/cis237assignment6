@@ -20,6 +20,7 @@ namespace cis237Assignment6.Controllers
         {
             DbSet<Beverage> WineToSearch = db.Beverages;
 
+            //Setting some blank defaults for the filter properties
             string filterName = "";
             string filterPack = "";
             string filterMin = "";
@@ -29,7 +30,7 @@ namespace cis237Assignment6.Controllers
             decimal min = 0;
             decimal max = 9999.99m;
 
-            bool activeBool = false;
+            bool activeBool = true;
 
             //Check to see there is a value in the session, and if there is, assign it to the
             //variable that we setup to hold the value.
@@ -41,19 +42,19 @@ namespace cis237Assignment6.Controllers
             {
                 filterPack = (string)Session["pack"];
             }
-            //same as above but for min, and we are parsing the string
+            //Parse the string if it's not null/whitespace
             if (Session["min"] != null && !String.IsNullOrWhiteSpace((string)Session["min"]))
             {
                 filterMin = (string)Session["min"];
                 min = Decimal.Parse(filterMin);
             }
-            //same as above but for max, and we are parsing the string
+            //Same as above but for the maximum
             if (Session["max"] != null && !String.IsNullOrWhiteSpace((string)Session["max"]))
             {
                 filterMax = (string)Session["max"];
                 max = Decimal.Parse(filterMax);
             }
-
+            //I'm sure there was a better option than parsing a string to a bool, but I don't have time to figure it out. 
             if (Session["active"] != null && !String.IsNullOrWhiteSpace((string)Session["active"]))
             {
                 filterActive = (string)Session["active"];

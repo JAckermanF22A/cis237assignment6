@@ -22,6 +22,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <!--This is where the magic happens and prevent unauthorized people from getting into our wine database-->
                     @if(User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Wine Database", "Index", "Wine")</li>

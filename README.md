@@ -3,7 +3,7 @@
 ## Due 12-17-2015
 
 ## Author
-
+Jacob Ackerman
 ## Description
 
 You are to create a web application using ASP.NET MVC to manage our beverage database.
@@ -98,5 +98,10 @@ This one is okay, and it is from Microsoft:
 ## Outside Resources Used
 
 ## Known Problems, Issues, And/Or Errors in the Program
+I attempted to figure out how to validate user input, but in the end all I got was validation that popped up if the create failed because the ID already
+was in use. 
+Other than that, it seems like there's a couple ways things could go wrong. It automatically added checks to see if you added a price or if the price is a decimal,
+but is totally fine if you leave the name and pack fields empty. 
+Kind of worried I totally botched it since it seemed like basically copying & pasting stuff from the in class work with some minor alterations...
 
 
