@@ -22,3 +22,10 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.CenterImage
+{
+    display:block;
+	margin:5px auto 0 auto;
+}
+
